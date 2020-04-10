@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAILWAY RESERVATION SYSTEM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family:serif;
+}
+    body{
+        background-color: #E8D4F7;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+/* Style the header */
+    .header{
+        background-color: #700CBC ;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
+    }
+    .menu{
+        list-style-type: none;
+        float: left;
+        margin-top: 12px;
+    }
+    .menu{
+        display: inline-block;
+    }
+    .menu a{
+     text-decoration: none;
+        color: black;
+        padding: 9.5px 10px;
+        border: 1px solid transparent;
+        transition: 0.4s ease;
+    }
+    .menu a:hover{
+        background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    .menu  a.active{
+          background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    label{
+        margin: 0 40px 0 0;
+        font-size: 20px;
+        line-height: 40px;
+        display: none;
+        width: 26px;
+    }
+    #toggle{
+        display: none;
+    }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    
+  float: left;
+  padding: 10px; 
+    /* Should be removed. Only for demonstration */
+}
+/* Left and right column */
+.column.side {
+  width: 20%;
+  height: auto;
+  padding-top: 50px;
+}
+    
+  
+/* Middle column */
+.column.middle {
+  width: 60%;
+  height: auto;
+  padding-top: 50px;
+}
+    .pow{
+       width: 100%; 
+    }
+    #intro{
+        text-align: center;
+        text-decoration: underline;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    #pow{
+         text-align: center;
+        text-decoration: underline;
+        padding-bottom: 15px;
+    }
+    h3{
+        padding: 3px;
+    }
+    p{
+        padding: 5px;
+    }
+    #pow2{text-align: center;
+        text-decoration: underline;
+        padding-top: 50px;
+        padding-bottom: 15px;}
+    #pow3{text-align: center;
+        text-decoration: underline;
+        padding-top: 50px;
+        padding-bottom: 15px;}
+        #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#700CBC;
+  color: #E8D4F7;
+}
+    
+    
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #700CBC;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;    
+    }
+    label{
+        display: block;
+        cursor: pointer;
+  }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: #700CBC;
+    }
+    .menu a{
+        display:block;
+        border: 1px solid transparent;
+        margin=0;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<label for="toggle">&#9776</label>
+<input type="checkbox" id="toggle">
+<div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="meals.html">MEALS</a>
+        <a class="active" href="#">HOLIDAYS</a>
+        <a href="sevices.html">PNR STATUS</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+    </div> 
+
+<div class="row">
+  <div class="column side">
+   <h4>This page includes --(click directly to reach)</h4>
+   <p><a href="#pow">1. Palace On Wheels</a></p>
+      <p><a href="#pow2">2. Royal Rajasthan On Wheels</a></p>
+      <p><a href="#pow3">3. Maharaja Express</a></p>
+    </div>
+  <div class="column middle">
+     <h1 id="pow">
+         Palace On Wheels
+     </h1>
+      <img class="pow" src="images/palace.jpg">
+      <h1 id="intro">Introduction</h1>
+      <h3>Far from your imagination...A majestic creation..</h3>
+      <p>That's Palace on Wheels!</p>
+<p>
+Palace on Wheels, the epitome of luxury and comfort, beckons you to travel back in time to the era of raja-maharajas. A feather in the cap of Rajasthan, Palace on Wheels is one of the most luxurious trains in the world. Reflecting the rich cultural heritage of Rajasthan, the train offers a heritage tour high on luxury. It was once the personal railway coaches of the Maharajas of the princely states of Rajasthan, Gujrat and the Nizam of Hyderabad.
+</p>
+<p>
+Embark on this royal journey, get treated like a 'king' and explore several enchanting destinations of North India. Offering 7 nights/8 days of a royal journey, the train covers Jaipur (the Pink city), Jaisalmer, Jodhpur, Ranthambhor National Park, Chittorgarh, Udaipur (the city of Lakes), the Bharatpur bird sanctuary and the symbol of love and romance, Agra, before returning to Delhi, the capital of India.</p>
+ <h3>History</h3>
+ <p>The pride of Indian Railways, Palace on Wheels has a glorious history. Its luxury coaches were once used by the raja-maharajas of the bygone era. Recapturing the "royal era", the train mirrors the rich heritage of the princely states of India. Occupying a prized place among the most luxurious trains in the world, Palace on Wheels started as a fascinating holiday train on 26th January, 1982. And became operational in October of the same year.</p>
+ <p>Palace on Wheels was the brainchild of Indian Railways and Rajasthan Tourism. To recreate the charm of the glorious era, thirteen carriages from different princely states were brought together and renovated. This luxurious train was launched with unmatched facilities and services to offer its passengers a journey soaked in royalty and luxury.</p>
+ <h1 id="intro">Itinerary</h1>
+ <p>The luxurious Palace on Wheels offers 7 Nights/ 8 Days tour, soaked in luxury and royalty to the hilt. The train starts from Delhi on every Wednesday of the week.
+
+</p>
+<h3>Day 01 - Wednesday: Delhi</h3>
+<p>Embark on your royal journey on the Palace on Wheels from Delhi Cant. railway station at 17:45 hrs. Honours its guests with a warm and traditional welcome. Enjoy delicious dinner on board at 20:00 hrs</p>
+ <h3>Day 02 - Thursday: Jaipur
+
+</h3>
+ <p>Arrive in Jaipur, the pink city of Rajasthan at 02:00 hrs. Receive a royal welcome with elephants and a Shehnai recitation. Jaipur is a fascinating city planned according to Vaastu Shastra by Maharaja Sawai Jai Singh II in 1728 A.D. Enjoy lunch at the famed Rambagh Palace Hotel. Visit the mesmerizing Hawa Mahal, the Jantar Mantar, Nahargarh Fort, Amber Fort and the City Palace. Return to Palace on Wheels at around 18:30 hrs. Dinner on board. The train departs at 19:30 for Jaisalmer.</p>
+ <h3>
+     Day 03 -Sunday: Sawai Madhopur
+ </h3>
+ <p>Arrive in Sawai Madhopur at 04:00 hrs. Tourists from across the globe come here to visit its renowned Ranthambore National Park. Famous for tigers, the park provides shelter to a variety of wildlife species. The other attraction is Ranthambore Fort. After sightseeing return to the train and head towards Chittaurgarh at 10:30 hrs.
+
+Reach Chittaurgarh, the indomitable city, at 15:30 hrs. The city is dominated by the fortified Chittaurgarh Fort, the largest fort of India. It reverberates with history of heroism and bravery. Visit the fort, Vijay Stambh(Tower of Victory) and the Kirti Stambh (Tower of Fame). Leave for Udaipur.</p>
+ <h3>
+     Day 04 -Monday: Udaipur
+ </h3>
+ <p>Arrive in Udaipur at 15:30 hrs., a beautiful city founded in the year 1568 by Maharana Udai Singh. Popularly known as the "city of lakes and palaces", Udaipur is undoubtedly one of the most romantic cities of India. Visit the arresting Jag Niwas, Jag Mandir and Lake Palace. Relish your lunch at Lake Palace Heritage hotel. Post lunch, visit the enchanting City Palace.
+
+</p>
+ <h3>Day 05 - Friday: Jaisalmer</h3>
+ <p>Arrive in Jaisalmer, the Golden City famous for its fort and havelis, at around 08:15 hrs. It was established in 1156 by Bhatti Rajput ruler Rawal Jaisal. Visit the stunning Patwon ki haveli and Nathmalji ki haveli, the architectural masterpieces. Post lunch, enjoy camel safari in the unfathomable sand dunes. Have a good time watching the cultural programmes at a hotel in the city. Relish your dinner on the sand dunes under the moonlit sky. Return to the train. The train, at 23:00 hrs, continues its journey to the next halt, Jodhpur.</p>
+ <h3>Day 06 - Saturday: Jodhpur</h3>
+ <p>Arrive in Jodhpur, a wonderful city nestled on the foothills of a sandstone hill. An oasis in the desert, Jodhpur is a fortified city with high stonewall pierced with seven gates. Visit its attractions - Mehrangarh Fort, Moti Mahal, Sheesh Mahal, Phool Mahal, Sileh Khana and Daulat Khana. Enjoy a royal lunch at the opulent Umaid Bhawan Palace. Return to the Palace on Wheels. The train leaves at 15:30 hrs for Sawai Madhopur.</p>
+ <h3>Day 07 - Tuesday: Bharatpur-Agra</h3>
+ <p>
+     Arrive in Bharatpur at 06:30 hrs. Post breakfast, explore the wilderness of the world famous Bharatpur National Park. Also known as Keoladeo Ghana National Park, the Park is a home to an amazing variety of birds, both resident and migratory. Apart from avian species, it also houses a variety of other wildlife species. Depart Bharatpur at 11:45 for Agra.
+      </p><p>
+Arrive Fatehpur Sikri at 14:30 hrs. Visit its famous attraction- Mosque and Tomb of Salim Chishti ( a Muslim Sufi saint) built by the Mughal emperor Akbar. Post lunch at a hotel in Agra, visit the incredible Taj Mahal. It is one of the seven wonders of the world, symbolizing eternal love. Beautifully located on the banks of River Yamuna, it was built by the 5th Mughal Emperor, Shah Jahan in the year 1631 in memory of his beloved wife, Mumtaz Mahal. Dinner on board.
+ </p>
+ <h3>Day 08 - Wednesday: Delhi</h3>
+ <p>Arrive in Delhi at Delhi Cant. railway station at 6:00 hrs. Breakfast on board. This marks the end of your royal journey, leaving you with a record of golden memories.</p>
+ <h1 id="intro">
+     Tariff
+ </h1>
+ <table id="customers">
+  <tr>
+    <th>Occupancy</th>
+    <th>Fare</th>
+    <th>Description</th>
+    </tr>
+  <tr>
+    <td>Single</td>
+    <td>INR 51900 per night</td>
+    <td>Single Cabin</td>
+    </tr>
+     <tr>
+    <td>Double</td>
+    <td>INR 39000 per person per night</td>
+    <td>Twin Cabin Sharing</td>
+    </tr>
+     <tr>
+    <td>Super Deluxe</td>
+    <td>INR 108000 per cabin per night</td>
+    <td>Double Super Deluxe Cabin</td>
+    </tr>
+      </table>
+      <h1 id="pow2">Royal Rajasthan On Wheels</h1>
+      <img class="pow" src="images/Royal-Rajasthan-on-Wheels-2-1024x768-1.jpg" height="500px">
+      <h1 id="pow2">Introduction</h1>
+      <p>Embark on a journey, offering you eight days of regal sojourn that takes you to the most sought after destinations such as Rajasthan, Agra and Delhi. An expedition to the colourful desert land by Royal Rajasthan on Wheels is truly an unforgettable experience. The luxury train allows you to visit majestic forts and palaces, varied landscapes, diverse cultures and vibrant colours of the Rajasthan. The highlights of the train include its exemplary interiors, delicious meals, expensive wines and above all, personalized service by the 'Khidmatgars' or attendants. Flagging off from Delhi, the luxury train takes you to the wonderful destinations of Jaisalmer, Jaipur, Jodhpur, Chittorgarh, Sawai Madhopur, Udaipur and Bharatpur. This is the perfect opportunity for you to experience the royal grandeur of Rajput kings. The train also enables you to explore the erstwhile Mughal capital Agra along with the architectural marvel of Taj Mahal</p>
+      <h3>History</h3>
+      <p>This luxury train is the result of the success of Palace on Wheels, therefore, the concept, itineraries, design and facilities of the train is inspired from the luxury train. Royal Rajasthan on Wheels commenced its royal journey in January 2009. The royal train is a joint venture of the Indian Railways & Rajasthan Tourism Development Corporation (RTDC). The train promises to serve the best of hospitality and the elegance of the bygone era.
+      </p>
+      <h1 id="pow2">Itinerary</h1>    
+      <h3>Day-1, Sunday, Departure 16.30 PM</h3>
+      <p>Delhi The luxurious Royal Rajasthan on Wheels takes you through a seven day exploration of the vibrant Rajasthan. The magic of the splendid journey begins at New Delhi and prepares you to weave the fabric of delightful imagination becoming reality over the next seven days. Your royal journey begins from Delhi and takes you through various erstwhile princely states.
+</p>
+<p>Welcome on board at Delhi with the ceremonial greetings at the safdarjung station with traditional aarti and tika with garlanding and some mock tails to refresh your selves. After check in, you would be escorted to the respective cabins. Feel the difference of the World in the moving Palace which empowers luxury and tradition hand to hand.
+
+</p>
+      <h3>Day-2, Monday, Arrive at 09.15 AM. Breakfast on board | Departure 17.10 PM</h3>
+      <p>
+          Jodhpur the second largest city of the state of Rajasthan is famous for its magnificent Meharangarh fort. Another example of Rajput glory is the Jaswant Thada built in 1899.
+
+      </p>
+      <p>Lunch at the beautiful 5 star deluxe heritage hotel & dinner on board.
+
+</p>
+      <h3>Day-3, Tuesday, Arrival 08.00 AM Breakfast on board | Departure 14.30 PM</h3>
+      <p>Water marked by whimsy & splendor, the Venice of the holds stage as one of India’s truly seductive cities. Udaipur is an international destination unto itself, packed with princeliness & passion, Udaipur is raw Rajput dreaming, with palaces, haveils gardens & temples at every turn. Visit to the beautiful princely city palace. Lunch at 5 star hotel & in the afternoon followed by a trip to crystal gallery.
+
+</p>
+      <p>Day-3, Tuesday, Arrival 16.45 AM |   Departure 22.00 PM
+
+</p>
+      <p>The story is a saga of valor, tenacity & sacrifice. The fort of Chittorgarh is a treasure trove of history & offers to the traveler an insight into the life of the great Rajput rulers. The victory tower or Vijay Stambh is one of the main tourist attractions of the fort. Gaumukh reservoir & the palace of queen Padmini are important spots to the south of the Rana Kumbha palace. The light & sound programme is shown at the fort.
+</p>
+      <p>Dinner on board/ Hotel Panna with cultural programme.
+
+</p>
+      <h3>Day-4, Wednesday, Arrival 05.30 AM Breakfast on board or Hotel Vinayak | Departure 11.00 AM</h3>
+      <p>Located in the eastern part of Rajasthan, Sawai Modhupur’s claim to fame today is the Ranthambore Fort & Ranthambore National Park. Visit the national park to catch a glimpse of the majestic tigers roaming around in the open wilderness & also pay a visit to the imposing fort to turn a page in the history of Rajasthan. There is also a temple on route the park by the name of Amareshwar Mohadeo temple which can be visited by tourist.
+
+</p>
+      <p>Lunch on board</p>
+      <h3>Day-4, Wednesday, Arrival 13:15 PM | Departure 22.15 PM</h3>
+      <p>Welcome by caparisoned elephants & sweet music of the auspicious ‘Shehnai’. Watch the awesome ‘Hawa Mahal’ (the palace of winds), elephants ride at amber fort, shopping of centuries old object de arts & other items.
+Lunch at a 5 star hotel / on board & visit to the city palace residence of the erstwhile maharaja of Jaipur which houses a museum of amazing centuries-old artifacts & the observatory built by the founder of jaipur maharaja Sawai jai Singh-ii who himself was noted astronomer.</p>
+      <p>Dinner hotel jai Mahal palace with cultural program.</p>
+      <h3>Day-5, Thursday, Arrival 11.00 AM Breakfast on board | Departure 18.30 PM</h3>
+     <p>The 9th to 12th century temples of Khajuraho is the evidences of the architectural geniuses during the times of chandela dynasty. situated in Madhya Pradesh, India, Khajuraho oozes with passion, eroticism, dance & music & other finesses of creative arts depicted in sculpture & images of the temples were built in north Indian ‘Nagara’ style of architure, though only 20 of them have survived the rough weather conditions over long years of time. Guest will take on visit of temples & museum.</p>
+      <p>Lunch at 5-star hotel & dinner on board</p>
+      <h3>Day-6, Friday, Arrival 06.00 AM |   Departure 18.00 PM</h3>
+      <p>Varanasi is the oldest city of the world. Varanasi is more than 3000 years old & is famous as the city of temples. In Varanasi, there are temples at every few paces. Jyotirlinga Visvanatha temple or golden temple, rebuilt in 1776, is dedicated to the lord Shiva. The Jnana Vapi well (meaning ‘well of wisdom) is believed to have been dug by lord Shiva himself. The Ganga Ghats (river front) are the most popular pilgrimage spot of Varanasi & are centers of music & learning. The holy city has been a symbol of spiritualism, philosophy & mysticism for thousands of years & has produced great saints & personalities like Gautama Buddha, Mahavira, Kabir, Tulsi das, Shankaracharaya, Ramanuja & Patanjali.</p>
+      <p>Lunch at 5-star hotel & dinner on board. Sightseeing include visit to Ghats, Maha Aarti, temples & Buddhist Temples at Saarnath.</p>
+      <h3>Day-7, Saturday, Arrival 05.00 AM Breakfast on board | Departure 23.00 PM</h3>
+      <p>Agra is one of the prominent destinations of the world tourism map with two heritage monuments visiting Taj Mahal & Agra Fort. It is a vibrant centre of culture, art & religious philosophies that have enriched mankind & shaped human thought over centuries. Agra is famous for handicrafts products such as Inlay work on marvel, leather work, footwear, brass-wear, carpets, Jewellery, Zari & embroidery work.</p>
+      <p>Lunch at 5-star hotel & dinner on board.</p>
+      <h3>Day-8, Sunday, Arrival 04.00 AM Breakfast on board. Check out time 07.45 AM</h3>
+      <p>Tour end at Delhi.
+</p>
+ <h1 id="pow2">Tariff</h1>
+ <table id="customers">
+  <tr>
+    <th>Occupancy</th>
+    <th>Fare</th>
+    <th>Description</th>
+    </tr>
+  <tr>
+    <td>Single</td>
+    <td>INR 51900 per night</td>
+    <td>Single Cabin</td>
+    </tr>
+     <tr>
+    <td>Double</td>
+    <td>INR 39000 per person per night</td>
+    <td>Twin Cabin Sharing</td>
+    </tr>
+     <tr>
+    <td>Super Deluxe</td>
+    <td>INR 108000 per cabin per night</td>
+    <td>Double Super Deluxe Cabin</td>
+    </tr>
+      </table>
+      <h1 id="pow3"> Maharaja Express</h1>
+      <img class=pow src="images/maharaja-express-1170x614.jpg">
+      <h1 id="pow3">Introduction</h1>
+      <p>The royal luxury train Maharaja's Express promises to take you to the world of raja-maharajas! On board this train, you can enjoy a royal experience to the various states of incredible India. Enjoy the fascinating attractions like wildlife, royal palaces and forts, mountains, beaches, monuments, desert, cuisine and fairs and festivals.
+</p>
+ <p>Maharaja Express is the finest way to explore all these fabulous attractions in a royal style while enjoying luxury. The train takes its passengers to various enchanting regions of India, offering five travel itineraries touching wonderful themes of India Tourism.
+
+</p>
+ <p>This luxury train promises to take guests across the prominent destinations of incredible India. Taj Mahal, wildlife of Ranthambore, Khajuraho temples and the sacred bathing Ghats of Varanasi with a royal caravan presents a different way to explore the best of the country.
+
+</p>
+ <p>An expedition on Maharaja's Express, India will surely make you feel like king with its world-class facilities and services. Live the royal lifestyle on board this train for a week and enjoy the exciting tour.
+
+</p>
+ <h3>Histroy</h3>
+ <p>The Maharaja's Express is the royal creation of Indian Railway Catering and Tourism Corporation Ltd.( IRCTC) and Cox and Kings India Ltd. It is Asia's costliest train which will begin its royal journey in March 2010. After doing an extensive research on some of the most luxurious trains in the world, this train was built.
+
+</p>
+ <h1 id="pow3">Itinerary</h1>
+ <h3>The Indian Splendour - A wonderful Journey through a magical land</h3>
+ <p>Duration: 07 Days / 06 Nights
+</p><p>Destinations Covered: Delhi – Agra – Ranthambore – Jaipur – Bikaner – Jodhpur – Udaipur – Mumbai
+
+</p><p>In this Journey visit the world's greatest monument of love - the Taj Mahal, spot the elusive tiger in Ranthambore National Park, soak up the spectacular regal heritage of Rajasthan n its magnificent forts, vibrant Bazars and the Royal cuisine. The journey will leave you with everlasting memories of a unique mix of Culture, History and Folklore.
+
+</p>
+ <h3>Day 1 (Sunday) - Delhi and Agra
+
+</h3>
+ <p>In the morning, board the luxurious Maharajas' Express at Delhi. The train will proceed to Agra. Pay a visit to the splendid Agra Fort. Brunch and dinner on board. Overnight stay in the train.
+
+</p>
+ <h3>Day 2 (Monday) - Agra and Ranthambore
+
+</h3>
+ <p>Deboard the Maharajas' Express to marvel at the Taj Mahal in the early morning hours. After exploring the white-marble epitome of love, continue to an exclusive venue for breakfast. Later get back to the train as it proceeds to Sawai Madhopur. After lunch at one of the lavish restaurants onboard, disembark for safari in the Ranthambore National Park. Dinner onboard as the train proceeds to Jaipur.
+
+</p>
+ <h3>Day 3 (Tuesday) - Jaipur
+
+</h3>
+ <p>After breakfast aboard, disembark to visit the Amber Fort of Jaipur. Return to train for a sumptuous lunch. In the evening, you will be taken to an exclusive venue for dinner. Overnight stay aboard as train proceeds to Bikaner.
+
+</p>
+ <h3>Day 4 (Wednesday) - Bikaner
+
+</h3>
+ <p>Begin the day with a leisurely breakfast onboard. After a delightful lunch in the train, disembark for a visit to the Junagarh Fort. An exclusive bar-be-cue is planned for evening on the golden sand dunes. Return to the train for overnight stay as train proceeds to Jodhpur.
+
+</p>
+ <h3>Day 5 (Thursday) - Jodhpur
+
+</h3>
+ <p>Start the day with a hearty breakfast on board. The day is free for your leisurely pursuits on the train. After a delightful lunch, deboard the train. Leave for a visit to the mighty Mehrangarh Fort and a walking tour of the Old Clock Tower Market. Dinner is scheduled at an exclusive venue. Stay overnight on the train as it makes way towards Udaipur.
+
+</p>
+ <h3>Day 6 (Friday) – Udaipur
+
+</h3>
+ <p>Start the day with breakfast aboard. Later, proceed for a boat ride on Lake Pichola and visit to City Palace. Rest your feet and treat your taste buds with lunch at an exclusive venue. Return to the train for leisurely evening. Dinner and overnight onboard as train proceeds to Mumbai.
+
+</p>
+ <h3>Day 7 (Saturday) – Mumbai
+
+</h3>
+ <p>After a hearty breakfast onboard, bid farewell to the Maharajas' Express as the journey ends in Mumbai.
+
+</p>
+ <h1 id="pow3">Tariff</h1>
+ <table id="customers">
+  <tr>
+    <th>Decription</th>
+    <th>Deluxe Cabin</th>
+    <th>Junior Suite</th>
+    <th>Suite</th>
+    <th>Presidential Suite</th>
+    </tr>
+  <tr>
+    <td>Adult</td>
+    <td>INR 4,37,800</td>
+    <td>INR 6,92,570</td>
+    <td>INR 10,10,300</td>
+<td>INR 17,35,800</td>
+    </tr>
+     <tr>
+    <td>Single Supplement</td>
+    <td>INR 3,30,180</td>
+    <td>INR 6,23,750</td>
+    <td>INR 10,10,300</td>
+    <td>INR 17,35,080</td>
+
+      </tr>
+      </table>
+  </div>
+  
+  <div class="column side" >
+      right
+  </div>
+</div>
+
+<div class="footer">
+  <p>Copyright © 2020,Personal Assignment-Railway Reservation System, Designed By- Akshansh Chaudhary</p>
+</div>
+
+</body>
+</html>

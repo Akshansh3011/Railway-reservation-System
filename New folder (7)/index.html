@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAILWAY RESERVATION SYSTEM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family:serif;
+}
+    body{
+        background-color: #E8D4F7;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+/* Style the header */
+    .header{
+        background-color: #700CBC ;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
+    }
+    .menu{
+        list-style-type: none;
+        float: left;
+        margin-top: 12px;
+    }
+    .menu{
+        display: inline-block;
+    }
+    .menu a{
+     text-decoration: none;
+        color: black;
+        padding: 9.5px 10px;
+        border: 1px solid transparent;
+        transition: 0.4s ease;
+    }
+    .menu a:hover{
+        background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    .menu  a.active{
+          background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    label{
+        margin: 0 40px 0 0;
+        font-size: 20px;
+        line-height: 40px;
+        display: none;
+        width: 26px;
+    }
+    #toggle{
+        display: none;
+    }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    
+  float: left;
+  padding: 10px; 
+    /* Should be removed. Only for demonstration */
+}
+/* Left and right column */
+.column.side {
+  width: 20%;
+  height: auto;
+  padding-top: 50px;
+}
+    /*left*/
+    .booking{
+    width: 100%;
+    top: 20%;
+    }    
+    .booking h1{
+        color: black;
+        text-align: center;
+        font-size: 33px;
+        border-bottom: 3px solid;
+        margin-bottom: 50px;
+        padding: 10px 0;
+    }
+    .textbox{
+        width: 100%;
+        height:auto;
+        overflow: hidden;
+        color: mediumpurple;
+        font-size: 20px;
+        padding: 8px 0;
+        margin: 8px 0;
+        border-bottom: 1px solid;
+    }
+    .textbox input{
+        border:none;
+        outline: none;
+        background: none;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        color: mediumpurple;
+        }
+    .select1{
+         width:100%;
+        background: none;
+        border: 2px outset;
+        background-color: mediumpurple;
+        padding: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+    #date{
+         width:100%;
+        background: none;
+        background-color: mediumpurple;
+        border: 2px outset;
+        color:black;
+        padding: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+    .btn{
+        width:100%;
+        background: none;
+        background-color: mediumpurple;
+        border: 2px outset;
+        color:black;
+        padding: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+    /*right*/
+    .ad{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  
+/* Middle column */
+.column.middle {
+  width: 60%;
+  height: auto;
+  padding-top: 50px;
+}
+    .heading{
+        font-size: 45px;
+        text-decoration: underline;
+        padding-bottom: 4px;
+    }
+    .logo{
+        float: left;
+    }
+        p1,h2{
+        float: left;
+            
+    }
+    column.middle h1{
+        padding:0px 10px;
+        font-size: 50px;
+        text-align: center;
+        text-decoration-color: #D61A46;
+    }
+    h2{
+        font-size: 40px;
+        text-decoration: underline;
+        padding-bottom: 4px;
+    }
+    .corona{
+        padding-top: 100px;
+    }
+    p1{
+        font-size: 25px;
+        padding:6px 2px 6px 2px; 
+        margin: 2px;
+        border: 2px solid;
+    }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #700CBC;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;    
+    }
+    label{
+        display: block;
+        cursor: pointer;
+  }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: #700CBC;
+    }
+    .menu a{
+        display:block;
+        border: 1px solid transparent;
+        margin=0;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<label for="toggle">&#9776</label>
+<input type="checkbox" id="toggle">
+<div class="menu">
+        <a class="active" href="#">HOME</a>
+        <a href="meals.html">MEALS</a>
+        <a href="holidays.html">HOLIDAYS</a>
+<a href="sevices.html">PNR STATUS</a>
+           <a href="contact.html">CONTACT</a>
+    </div>
+    </div> 
+
+<div class="row">
+  <div class="column side">
+    <div class="booking">
+        <h1> Book Your Ticket Here</h1>
+        <div class="textbox">
+            <input type="text" placeholder="FROM" name="" value="">
+        </div>
+        <div class="textbox">
+            <input type="text" placeholder="TO" name="" value="">
+        </div>
+        <div class="select">
+             <select class="select1">
+    <option>ALL</option>
+    <option>1ST AC</option>
+    <option>2ND AC</option>
+    <option>3RD AC</option>
+    <option>SLEEPER</option>
+  </select>  
+        </div>
+        <input type="date" id="date" name="">
+        <input class="btn" type="button" onclick="window.location.href = 'booking.html';" value="BOOK NOW"/>
+    </div>
+    </div>
+  <div class="column middle">
+      <img class="logo" src="images/1200px-Indian_Railway.svg.png" width="45px">
+  <h1 class="heading">
+  Welcome To Railways
+  </h1>
+  <img class="div" src="images/Homepage-Banner_Train.jpg" width="100%" height="400">
+  <h2>
+      Experience Our Services...
+  </h2>
+  <p1>
+      India has some of the most spectacular and unforgettable rail journeys in the world. Here you experience a simple way to find out everything you need to know in one easy place. There's no better way to enjoy India's outback, cities, coastal towns and regional areas in comfort.
+  </p1>  
+  <a  href="https://www.mygov.in/covid-19/?utm_source=mygov_campaign">    
+  <img class="corona" src="images/corona-virus-banner-new.jpg" width="100%">
+  </a>
+  </div>
+  <div class="column side" >
+      <img class="ad" src="images/imgad.jpg">
+  </div>
+</div>
+
+<div class="footer">
+  <p>Copyright © 2020,Personal Assignment-Railway Reservation System, Designed By- Akshansh Chaudhary</p>
+</div>
+
+</body>
+</html>

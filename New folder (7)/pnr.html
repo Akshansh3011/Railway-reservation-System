@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAILWAY RESERVATION SYSTEM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family:serif;
+}
+    body{
+        background-color: #E8D4F7;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+/* Style the header */
+    .header{
+        background-color: #700CBC ;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
+    }
+    .menu{
+        list-style-type: none;
+        float: left;
+        margin-top: 12px;
+    }
+    .menu{
+        display: inline-block;
+    }
+    .menu a{
+     text-decoration: none;
+        color: black;
+        padding: 9.5px 10px;
+        border: 1px solid transparent;
+        transition: 0.4s ease;
+    }
+    .menu a:hover{
+        background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    .menu  a.active{
+          background-color: #E8D4F7;
+        color: #9A0794;
+    }
+    label{
+        margin: 0 40px 0 0;
+        font-size: 20px;
+        line-height: 40px;
+        display: none;
+        width: 26px;
+    }
+    #toggle{
+        display: none;
+    }
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    
+  float: left;
+  padding: 10px; 
+    /* Should be removed. Only for demonstration */
+}
+    
+  
+/* Middle column */
+.column.middle {
+  width: 60%;
+  height: auto;
+  padding-top: 50px;
+    }
+    h1{
+        padding: 20px;
+    }
+    
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #700CBC;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+   .column.middle {
+    width: 100%;    
+    }
+    label{
+        display: block;
+        cursor: pointer;
+  }
+    .menu{
+        text-align: center;
+        width: 100%;
+        display: none;
+        background-color: #700CBC;
+    }
+    .menu a{
+        display:block;
+        border: 1px solid transparent;
+        margin=0;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<label for="toggle">&#9776</label>
+<input type="checkbox" id="toggle">
+<div class="menu">
+        <a  href="index.html">HOME</a>
+        <a href="meals.html">MEALS</a>
+        <a href="holidays.html">HOLIDAYS</a>
+        <a href="sevices.html">PNR STATUS</a>
+           <a href="contact.html">CONTACT</a>
+    </div>
+    </div> 
+
+<div class="row">
+   <div class="column middle">
+    <div class="info">
+    <H1> PNR status</H1>
+     <h1>Your seat has been confirmed - C2,28 In train number 82502</h1>
+     <h1>Your train is scheduled on time</h1>
+     <h1>Kindly reach station 1 hour before for check-in purpose</h1>
+     <h1> Wish you a happy journey</h1>
+     <h1>For any queries Contact Us</h1>
+      </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Copyright © 2020,Personal Assignment-Railway Reservation System, Designed By- Akshansh Chaudhary</p>
+</div>
+
+</body>
+</html>
